@@ -14,7 +14,7 @@ export const loadConfig = () => Services.loadConfig().then(res => {
   return res;
 });
 
-export const getUsers = () => Services.getUsers().then(res => {
+export const getCustomers = () => Services.getCustomers().then(res => {
   // if (res) {
   //   store.dispatch({
   //     type: Action.ACTION_LOAD_CONFIG_FINISH,

@@ -7,7 +7,7 @@ export class Services {
     return await httpGet("/master-data");
   }
 
-  static async getUsers() {
-    return await httpGet("/users");
+  static async getCustomers() {
+    return await httpGet("/customers");
   }
 }

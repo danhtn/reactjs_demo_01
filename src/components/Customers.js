@@ -8,18 +8,41 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
-import { Link } from 'react-router-dom';
+import FullScreenDialog from './FullScreenDialog';
 
 const styles = theme => ({
   seeMore: {
     marginTop: theme.spacing(3),
   },
+  customWrapper: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'row'
+  },
+  buttonAdd: {
+    width: '100px',
+    right: '-200px',
+    top: '-10px'
+  }
 });
 
-class Users extends React.Component {
+class Customers extends React.Component {
+  onUpdateCustomerData = (data) => {
+    const newCustomers = this.props.customers.map((element) => {
+      if (element.customerId === data.customerId) {
+        return data
+      } else {
+        return element
+      }
+    });
+    this.props.onUpdateCustomers(newCustomers)
+  }
+  onDeleteCustomerData = (customerId) => {
+    const newCustomers = this.props.customers.filter(customer => customer.customerId !== customerId);
+    this.props.onUpdateCustomers(newCustomers)
+  }
   render() {
-    const { customerSettings, customers } = this.props;
-    // const { customers } = this.state;
+    const { classes, customerSettings, customers } = this.props;
     const tableHeader = customerSettings.map((col, i) => {
       return (
         <TableCell key={i}>{col.displayText}</TableCell>
@@ -29,15 +52,11 @@ class Users extends React.Component {
     const tableContent = customers.map((row) => (
       <TableRow key={row.customerId}>
         <TableCell>
-          <Link
-            component="button"
-            variant="body2"
-            onClick={(event) => {
-              // event
-            }}
-          >
-            {row.customerId}
-          </Link>
+          <FullScreenDialog
+            data={row}
+            onUpdateCustomerData={this.onUpdateCustomerData}
+            onDeleteCustomerData={this.onDeleteCustomerData}
+          />
         </TableCell>
         <TableCell>{row.customerName}</TableCell>
         <TableCell>{row.customerType}</TableCell>
@@ -53,7 +72,18 @@ class Users extends React.Component {
 
     return (
       <React.Fragment>
-        <Title>List Users</Title>
+        <div className={classes.customWrapper}>
+          <Title>List Customers</Title>
+          {/* <Button
+            variant="outlined"
+            color="primary"
+            className={classes.buttonAdd}
+            onClick={(event) => {
+              console.log('KGIT-TED: Customers -> render -> event', event);
+            }}>
+            Add
+          </Button> */}
+        </div>
         <Table size="small">
           <TableHead>
             <TableRow>
@@ -64,12 +94,12 @@ class Users extends React.Component {
             {tableContent}
           </TableBody>
         </Table>
-      </React.Fragment>
+      </React.Fragment >
     );
   }
 }
 
-Users.propTypes = {
+Customers.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
@@ -79,4 +109,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(withStyles(styles)(Users));
+export default connect(mapStateToProps)(withStyles(styles)(Customers));

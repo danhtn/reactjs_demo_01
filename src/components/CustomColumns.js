@@ -31,13 +31,6 @@ class CustomDownload extends React.Component {
     }
   }
 
-  // componentDidUpdate(prevProps) {
-  //   // Typical usage (don't forget to compare props):
-  //   if (this.props.customerSettings.length !== prevProps.customerSettings.length) {
-  //     this.setState({ columns: _.pluck(this.props.customerSettings, 'name') })
-  //   }
-  // }
-
   handleChange = (event) => {
     const { unCheckedColumns } = this.state;
     let newColumns = [];

@@ -3,13 +3,6 @@ import {
   PieChart, Pie, Cell, Tooltip, Legend
 } from 'recharts';
 
-// const data = [
-//   { name: 'VIP Customers', value: 400 },
-//   { name: 'Loyal Customers', value: 300 },
-//   { name: 'Normal Customers', value: 300 },
-//   { name: 'New Customers', value: 200 },
-// ];
-
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 const RADIAN = Math.PI / 180;

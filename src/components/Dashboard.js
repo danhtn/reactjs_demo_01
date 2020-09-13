@@ -12,10 +12,10 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
-import Users from './Users';
+import Customers from './Customers';
 import Chart from './Chart';
 import CustomDownload from './CustomColumns';
-import { getUsers, loadConfig } from '../actions/Actions';
+import { getCustomers, loadConfig } from '../actions/Actions';
 
 const styles = ((theme) => ({
   root: {
@@ -84,11 +84,11 @@ class Dashboard extends React.Component {
 
   componentDidMount() {
     loadConfig();
-    getUsers().then(res => {
+    getCustomers().then(res => {
       const chartData = this.countCustomerType(res.data);
       this.setState({ customers: res.data, chartData });
     }).catch(error => {
-      console.log('getUsers -> error', error);
+      console.log('getCustomers -> error', error);
     })
   }
 
@@ -125,8 +125,13 @@ class Dashboard extends React.Component {
     ];
   }
 
+  onUpdateCustomers = (newCustomers) => {
+    this.setState({ customers: newCustomers });
+  }
+
   render() {
     const { classes } = this.props;
+    const { chartData, customers } = this.state;
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
     return (
       <div className={classes.root}>
@@ -154,20 +159,20 @@ class Dashboard extends React.Component {
               {/* Chart */}
               <Grid item xs={12}>
                 <Paper className={fixedHeightPaper}>
-                  <Chart chartData={this.state.chartData} />
+                  <Chart chartData={chartData} />
                   {/* <MainTabs /> */}
                 </Paper>
               </Grid>
-              {/* List Users */}
+              {/* Download */}
               <Grid item xs={12}>
                 <Paper className={classes.paper}>
-                  <Users customers={this.state.customers} />
+                  <CustomDownload customers={customers} />
                 </Paper>
               </Grid>
-              {/* Chart */}
+              {/* List Customers */}
               <Grid item xs={12}>
                 <Paper className={classes.paper}>
-                  <CustomDownload customers={this.state.customers} />
+                  <Customers customers={customers} onUpdateCustomers={this.onUpdateCustomers} />
                 </Paper>
               </Grid>
             </Grid>

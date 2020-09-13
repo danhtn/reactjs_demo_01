@@ -33,7 +33,7 @@ app.get('/api/master-data', function (req, res, next) {
 });
 
 var customers = getConfig('./data/customer.json');
-app.get('/api/users', function (req, res, next) {
+app.get('/api/customers', function (req, res, next) {
   res.send(customers);
 });
 
