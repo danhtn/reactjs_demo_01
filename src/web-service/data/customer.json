@@ -1,0 +1,122 @@
+[
+  {
+    "customerId": "C_0001",
+    "customerName": "CANNON TOOLS CO",
+    "customerType": "A",
+    "balance": "",
+    "phone": "0978423157",
+    "email": "user01@gmail.com",
+    "address": "Address 01",
+    "status": "",
+    "accountNumber": "",
+    "gender": "Male"
+  },
+  {
+    "customerId": "C_0002",
+    "customerName": "CANNON TOOLS CO",
+    "customerType": "B",
+    "balance": "",
+    "phone": "0978423157",
+    "email": "user01@gmail.com",
+    "address": "Address 01",
+    "status": "",
+    "accountNumber": "",
+    "gender": "Male"
+  },
+  {
+    "customerId": "C_0003",
+    "customerName": "CANNON TOOLS CO",
+    "customerType": "B",
+    "balance": "",
+    "phone": "0978423157",
+    "email": "user01@gmail.com",
+    "address": "Address 01",
+    "status": "",
+    "accountNumber": "",
+    "gender": "Male"
+  },
+  {
+    "customerId": "C_0004",
+    "customerName": "CANNON TOOLS CO",
+    "customerType": "D",
+    "balance": "",
+    "phone": "0978423157",
+    "email": "user01@gmail.com",
+    "address": "Address 01",
+    "status": "",
+    "accountNumber": "",
+    "gender": "Male"
+  },
+  {
+    "customerId": "C_0005",
+    "customerName": "CANNON TOOLS CO",
+    "customerType": "C",
+    "balance": "",
+    "phone": "0978423157",
+    "email": "user01@gmail.com",
+    "address": "Address 01",
+    "status": "",
+    "accountNumber": "",
+    "gender": "Male"
+  },
+  {
+    "customerId": "C_0006",
+    "customerName": "CANNON TOOLS CO",
+    "customerType": "C",
+    "balance": "",
+    "phone": "0978423157",
+    "email": "user01@gmail.com",
+    "address": "Address 01",
+    "status": "",
+    "accountNumber": "",
+    "gender": "Male"
+  },
+  {
+    "customerId": "C_0007",
+    "customerName": "CANNON TOOLS CO",
+    "customerType": "B",
+    "balance": "",
+    "phone": "0978423157",
+    "email": "user01@gmail.com",
+    "address": "Address 01",
+    "status": "",
+    "accountNumber": "",
+    "gender": "Male"
+  },
+  {
+    "customerId": "C_0008",
+    "customerName": "CANNON TOOLS CO",
+    "customerType": "D",
+    "balance": "",
+    "phone": "0978423157",
+    "email": "user01@gmail.com",
+    "address": "Address 01",
+    "status": "",
+    "accountNumber": "",
+    "gender": "Male"
+  },
+  {
+    "customerId": "C_0009",
+    "customerName": "CANNON TOOLS CO",
+    "customerType": "D",
+    "balance": "",
+    "phone": "0978423157",
+    "email": "user01@gmail.com",
+    "address": "Address 01",
+    "status": "",
+    "accountNumber": "",
+    "gender": "Male"
+  },
+  {
+    "customerId": "C_0010",
+    "customerName": "CANNON TOOLS CO",
+    "customerType": "D",
+    "balance": "",
+    "phone": "0978423157",
+    "email": "user01@gmail.com",
+    "address": "Address 01",
+    "status": "",
+    "accountNumber": "",
+    "gender": "Male"
+  }
+]

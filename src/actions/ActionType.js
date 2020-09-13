@@ -1,0 +1,3 @@
+export const Action = {
+  ACTION_LOAD_CONFIG_FINISH: 'ACTION_LOAD_CONFIG_FINISH'
+}

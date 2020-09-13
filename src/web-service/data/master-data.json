@@ -1,0 +1,44 @@
+{
+  "customerSettings": [
+    {
+      "name": "customerId",
+      "displayText": "ID"
+    },
+    {
+      "name": "customerName",
+      "displayText": "Name"
+    },
+    {
+      "name": "customerType",
+      "displayText": "Type"
+    },
+    {
+      "name": "balance",
+      "displayText": "Balance"
+    },
+    {
+      "name": "phone",
+      "displayText": "Phone"
+    },
+    {
+      "name": "email",
+      "displayText": "Email"
+    },
+    {
+      "name": "address",
+      "displayText": "Address"
+    },
+    {
+      "name": "status",
+      "displayText": "Status"
+    },
+    {
+      "name": "accountNumber",
+      "displayText": "Account Number"
+    },
+    {
+      "name": "gender",
+      "displayText": "Gender"
+    }
+  ]
+}
