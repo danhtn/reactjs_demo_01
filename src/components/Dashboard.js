@@ -14,7 +14,7 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import Users from './Users';
 import Chart from './Chart';
-import CheckboxesGroup from './CustomColumns';
+import CustomDownload from './CustomColumns';
 import { getUsers, loadConfig } from '../actions/Actions';
 
 const styles = ((theme) => ({
@@ -167,7 +167,7 @@ class Dashboard extends React.Component {
               {/* Chart */}
               <Grid item xs={12}>
                 <Paper className={classes.paper}>
-                  <CheckboxesGroup />
+                  <CustomDownload customers={this.state.customers} />
                 </Paper>
               </Grid>
             </Grid>

@@ -8,9 +8,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
-import { CSVLink } from 'react-csv';
 import { Link } from 'react-router-dom';
-// import { getUsers } from '../actions/Actions';
 
 const styles = theme => ({
   seeMore: {
@@ -19,16 +17,8 @@ const styles = theme => ({
 });
 
 class Users extends React.Component {
-
-  // componentDidMount() {
-  //   getUsers().then(res => {
-  //     this.setState({ customers: res.data });
-  //   }).catch(error => {
-  //   })
-  // }
-
   render() {
-    const { classes, customerSettings, customers } = this.props;
+    const { customerSettings, customers } = this.props;
     // const { customers } = this.state;
     const tableHeader = customerSettings.map((col, i) => {
       return (
@@ -74,9 +64,6 @@ class Users extends React.Component {
             {tableContent}
           </TableBody>
         </Table>
-        <div className={classes.seeMore}>
-          <CSVLink data={customers}>Download me</CSVLink>
-        </div>
       </React.Fragment>
     );
   }

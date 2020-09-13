@@ -7,7 +7,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import CheckboxesGroup from './CustomColumns';
+import CustomDownload from './CustomColumns';
 import Chart from './Chart';
 
 function TabPanel(props) {
@@ -84,7 +84,7 @@ export default function MainTabs() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <CheckboxesGroup />
+          <CustomDownload />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           <Chart />
